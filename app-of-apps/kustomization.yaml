@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: spectacular-takin-java-quarkus 
+  janus-idp.io/tekton: spectacular-takin-java-quarkus
+  backstage.io/kubernetes-id: spectacular-takin-java-quarkus
+  backstage.io/kubernetes-namespace: oc-ci-e2e 
+  app.kubernetes.io/part-of: spectacular-takin-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
